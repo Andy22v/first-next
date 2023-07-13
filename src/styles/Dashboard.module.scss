@@ -1,0 +1,13 @@
+.Dashboard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    .info-user{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
