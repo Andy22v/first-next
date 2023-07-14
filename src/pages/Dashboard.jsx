@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { auth } from "./auth";
-import "../styles/Dashboard.module.scss";
+import styles from "../styles/Dashboard.module.scss";
 
 export default function Dashboard() {
   const [isLogged, setLogged] = useState(false);
@@ -11,7 +11,10 @@ export default function Dashboard() {
   }, []);
 
   return isLogged ? (
-    <div className="Dashboard">
+    <div className={styles.Dashboard}>
+      <div className={styles.description}>
+        <Link href="/Login">Log out</Link>
+      </div>
       <h1>Welcome to Dashboard</h1>
       <div className="info-user">
         <p>Nome: {auth.username}</p>
